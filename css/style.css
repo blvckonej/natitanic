@@ -1,0 +1,151 @@
+@charset "UTF-8";
+* {
+  font-family: "Roboto", sans-serif;
+  outline: 0 !important;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1180px;
+}
+
+.header {
+  min-height: 787px;
+  background-color: #292929;
+}
+.header__bar {
+  display: flex;
+}
+.header__link {
+  display: flex;
+  justify-content: space-between;
+}
+.header__links {
+  margin-top: 26px;
+  list-style: none;
+  padding-left: 145px;
+}
+.header__links a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+  line-height: 1;
+  /*Задаём высоту строки (можно в пикселях)*/
+}
+.header__links a:after {
+  display: block;
+  /*превращаем его в блочный элемент*/
+  content: "";
+  /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+  height: 3px;
+  /*задаём высоту линии*/
+  width: 0%;
+  /*задаём начальную ширину элемента (линии)*/
+  background-color: #E2A300;
+  /*цвет фона элемента*/
+  transition: width 0.4s ease-in-out;
+  /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.header__links a:hover:after,
+.header__links a:focus:after {
+  width: 100%;
+}
+.header__icon {
+  margin-top: 26px;
+  padding-right: 74px;
+}
+.header__gleb {
+  margin-top: 194px;
+  width: 447px;
+  height: 377.47px;
+}
+.header__title {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.header__titles {
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0;
+}
+.header__name {
+  color: white;
+  margin-top: 20px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 81px;
+  text-transform: uppercase;
+}
+.header__descr {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21px;
+}
+.header__image img {
+  margin-top: 39px;
+  margin-left: 121px;
+  width: 586px;
+  height: 674px;
+  bottom: 0;
+}
+.header__button button {
+  margin-top: 20px;
+  cursor: pointer;
+  border: 0;
+  width: 200px;
+  height: 47px;
+  background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+  box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+  border-radius: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.skills {
+  min-height: 787px;
+  background-color: #414141;
+}
+.skills__container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.skills__form img {
+  margin-top: 113px;
+  width: 270px;
+  height: 270px;
+  border-radius: 29px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+  background-color: #2a2a2a;
+}
+.skills__forms {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.skills__forms img {
+  margin-right: 30px;
+  margin-top: 30px;
+  width: 270px;
+  height: 270px;
+  border-radius: 29px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+  background-color: #2a2a2a;
+}
+.skills__forms .skills__form2:last-child img {
+  margin-right: 0;
+}/*# sourceMappingURL=style.css.map */
