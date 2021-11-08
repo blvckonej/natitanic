@@ -1,7 +1,10 @@
 @charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
-  outline: 0 !important;
+}
+
+body {
+  background-color: #414141;
 }
 
 p {
@@ -14,7 +17,7 @@ p {
 }
 
 .header {
-  min-height: 787px;
+  min-height: 756px;
   background-color: #292929;
 }
 .header__bar {
@@ -46,9 +49,9 @@ p {
   /*задаём высоту линии*/
   width: 0%;
   /*задаём начальную ширину элемента (линии)*/
-  background-color: #E2A300;
+  background-color: #e2a300;
   /*цвет фона элемента*/
-  transition: width 0.4s ease-in-out;
+  transition: width 0.3s ease-in-out;
   /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
 }
 .header__links a:hover:after,
@@ -66,7 +69,6 @@ p {
 }
 .header__title {
   padding: 0;
-  margin-bottom: -4px;
   display: flex;
   justify-content: space-between;
 }
@@ -93,11 +95,7 @@ p {
   line-height: 21px;
 }
 .header__image img {
-  margin-top: 39px;
-  margin-left: 121px;
-  width: 586px;
-  height: 674px;
-  bottom: 0;
+  height: 100%;
 }
 .header__button button {
   margin-top: 20px;
@@ -105,7 +103,7 @@ p {
   border: 0;
   width: 200px;
   height: 47px;
-  background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
+  background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
   box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
   border-radius: 6px;
   text-align: center;
@@ -148,4 +146,140 @@ p {
 }
 .skills__forms .skills__form2:last-child img {
   margin-right: 0;
+}
+
+.about {
+  background-color: #414141;
+}
+.about__descr {
+  width: 370px;
+  min-height: 696px;
+  text-align: center;
+  background: url(/img/Aboutme.png);
+}
+
+.portfolio {
+  background-color: #414141;
+  padding: 0 0 150px 0;
+}
+.portfolio__title {
+  color: white;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.portfolio__desk {
+  display: flex;
+}
+.portfolio__arrows {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+  border-radius: 100%;
+  margin-top: 332px;
+}
+.portfolio__arrows img {
+  margin: 12px;
+}
+.portfolio__prewiev {
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 970px;
+  height: 600px;
+  background: linear-gradient(130.68deg, #414141 0%, #2d2d2d 100.52%);
+  box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+  border-radius: 29px;
+}
+.portfolio__text {
+  width: 296px;
+  height: 436px;
+  text-align: center;
+}
+.portfolio__titles {
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+.portfolio__descr {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 22px;
+  color: white;
+}
+.portfolio__more {
+  margin-top: 25px;
+  color: #e2a100;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.footer {
+  background: linear-gradient(130.68deg, #414141 0%, #2d2d2d 100.52%);
+  max-height: 238px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.footer__container {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__menu {
+  list-style-type: none;
+}
+.footer__links a {
+  font-weight: 300;
+  margin-top: 18px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+  line-height: 1;
+  /*Задаём высоту строки (можно в пикселях)*/
+}
+.footer__links a:after {
+  display: block;
+  /*превращаем его в блочный элемент*/
+  content: "";
+  /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+  height: 3px;
+  /*задаём высоту линии*/
+  width: 0%;
+  /*задаём начальную ширину элемента (линии)*/
+  background-color: #e2a300;
+  /*цвет фона элемента*/
+  transition: width 0.3s ease-in-out;
+  /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+}
+.footer__links a:hover:after,
+.footer__links a:focus:after {
+  width: 100%;
+}
+.footer__contact {
+  margin: 13px 0 50px 115px;
+}
+.footer__contact p {
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  margin-top: 18px;
+}
+.footer__icon {
+  display: flex;
+  margin: 50px 0px 57px 56px;
+}
+.footer__arrowup {
+  margin-left: 32px;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+}
+.footer__arrowup img {
+  margin: 12px;
 }/*# sourceMappingURL=style.css.map */

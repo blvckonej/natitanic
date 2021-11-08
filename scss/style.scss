@@ -1,152 +1,276 @@
 * {
-    font-family: 'Roboto', sans-serif;
-    outline: 0 !important;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #414141;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    margin: 0 auto;
-    width: 1180px;   
+  margin: 0 auto;
+  width: 1180px;
 }
 
 .header {
-    min-height: 787px;
-    background-color: #292929;
-    &__bar {
-        display: flex;
+  min-height: 756px;
+  background-color: #292929;
+  &__bar {
+    display: flex;
+  }
+  &__link {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__links {
+    margin-top: 26px;
+    list-style: none;
+    padding-left: 145px;
+    a {
+      color: white;
+      text-decoration: none;
+      display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+      line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
     }
-    &__link {
-        display: flex;
-        justify-content: space-between;
+    a:after {
+      display: block; /*превращаем его в блочный элемент*/
+      content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+      height: 3px; /*задаём высоту линии*/
+      width: 0%; /*задаём начальную ширину элемента (линии)*/
+      background-color: #e2a300; /*цвет фона элемента*/
+      transition: width 0.3s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
     }
-    &__links {        
-        margin-top: 26px;
-        list-style: none;
-        padding-left: 145px;
-        a {
-            color: white;
-            text-decoration: none;
-            display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
-            line-height: 1; /*Задаём высоту строки (можно в пикселях)*/           
-        }
-        a:after {
-            display: block; /*превращаем его в блочный элемент*/
-            content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
-            height: 3px; /*задаём высоту линии*/
-            width: 0%; /*задаём начальную ширину элемента (линии)*/
-            background-color: #E2A300; /*цвет фона элемента*/
-            transition: width 0.4s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
-            }
-        a:hover:after,
-        a:focus:after {
-            width: 100%;
-            }
-        
-        
+    a:hover:after,
+    a:focus:after {
+      width: 100%;
     }
-    &__icon {
-        margin-top: 26px;
-        padding-right: 74px;
+  }
+  &__icon {
+    margin-top: 26px;
+    padding-right: 74px;
+  }
+  &__gleb {
+    margin-top: 194px;
+    width: 447px;
+    height: 377.47px;
+  }
+  &__title {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__titles {
+    color: white;
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0;
+  }
+  &__name {
+    color: white;
+    margin-top: 20px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 81px;
+    text-transform: uppercase;
+  }
+  &__descr {
+    color: white;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+  }
+  &__image {
+    img {
+      height: 100%;
     }
-    &__gleb {
-        margin-top: 194px;
-        width: 447px;
-        height: 377.47px;
+  }
+  &__button {
+    button {
+      margin-top: 20px;
+      cursor: pointer;
+      border: 0;
+      width: 200px;
+      height: 47px;
+      background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+      box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
+      border-radius: 6px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
     }
-    &__title {
-        padding: 0;
-        margin-bottom: -4px;
-        display: flex;        
-        justify-content: space-between;
-    }
-    &__titles {
-        color: white;
-        font-size: 48px;
-        font-weight: 500;
-        text-transform: uppercase;
-        padding: 0;
-    }
-    &__name {
-        color: white;
-        margin-top: 20px;
-        font-size: 72px;
-        font-weight: 700;
-        line-height: 81px;
-        text-transform: uppercase;
-    }
-    &__descr {
-        color: white;
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 21px;
-    }
-    &__image {        
-        img {
-            margin-top: 39px;
-            margin-left: 121px;
-            width: 586px;
-            height: 674px;
-            bottom: 0;
-        }        
-    }
-    &__button {        
-        button {
-            margin-top: 20px;
-            cursor: pointer;
-            border: 0;
-            width: 200px;
-            height: 47px;
-            background: linear-gradient(87.32deg, #E2A300 4.47%, #E29500 95.53%);
-            box-shadow: 0px 2px 13px rgba(226, 158, 0, 0.48);
-            border-radius: 6px;
-            text-align: center;
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: 700;
-        }
-    }
+  }
 }
 
-.skills {    
-    min-height: 787px;
-    background-color: #414141;
-    &__container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        align-items: center;
-    }      
-    &__form {
-        img {
-            margin-top: 113px;
-            width: 270px;
-            height: 270px;
-            border-radius: 29px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
-            background-color: #2a2a2a;
-        }
+.skills {
+  min-height: 787px;
+  background-color: #414141;
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__form {
+    img {
+      margin-top: 113px;
+      width: 270px;
+      height: 270px;
+      border-radius: 29px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+      background-color: #2a2a2a;
     }
-    &__forms {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        img {               
-            margin-right: 30px;     
-            margin-top: 30px;
-            width: 270px;
-            height: 270px;
-            border-radius: 29px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
-            background-color: #2a2a2a;
-        }
+  }
+  &__forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      margin-right: 30px;
+      margin-top: 30px;
+      width: 270px;
+      height: 270px;
+      border-radius: 29px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+      background-color: #2a2a2a;
+    }
     .skills__form2:last-child img {
-        margin-right: 0;
+      margin-right: 0;
     }
-        
+  }
+}
+
+.about {
+  background-color: #414141;
+  &__descr {
+    width: 370px;
+    min-height: 696px;
+    text-align: center;
+    background: url(/img/Aboutme.png);
+  }
+}
+
+.portfolio {
+  background-color: #414141;
+  padding: 0 0 150px 0;
+  &__title {
+    color: white;
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__desk {
+    display: flex;
+  }
+  &__arrows {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);
+    border-radius: 100%;
+    margin-top: 332px;
+    img {
+      margin: 12px;
     }
-    
+  }
+  &__prewiev {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 970px;
+    height: 600px;
+    background: linear-gradient(130.68deg, #414141 0%, #2d2d2d 100.52%);
+    box-shadow: 0px 4px 15px rgba(27, 27, 27, 0.28);
+    border-radius: 29px;
+  }
+  &__text {
+    width: 296px;
+    height: 436px;
+    text-align: center;
+  }
+  &__titles {
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+  }
+  &__descr {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    color: white;
+  }
+  &__more {
+    margin-top: 25px;
+    color: #e2a100;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+
+.footer {
+  background: linear-gradient(130.68deg, #414141 0%, #2d2d2d 100.52%);
+  max-height: 238px;
+  margin: 0 auto;
+  padding: 50px 0;  
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__menu {
+    list-style-type: none;
+  }
+  &__links {
+    a {
+      font-weight: 300;
+      margin-top: 18px;
+      color: white;
+      text-decoration: none;
+      display: inline-block; /*делаем чтобы наша ссылка из строчного элемента превратилась в строчно-блочный*/
+      line-height: 1; /*Задаём высоту строки (можно в пикселях)*/
+    }
+    a:after {
+      display: block; /*превращаем его в блочный элемент*/
+      content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+      height: 3px; /*задаём высоту линии*/
+      width: 0%; /*задаём начальную ширину элемента (линии)*/
+      background-color: #e2a300; /*цвет фона элемента*/
+      transition: width 0.3s ease-in-out; /*данное свойство отвечает за плавное изменение ширины. Здесь можно задать время анимации в секундах (в данном случае задано 0.4 секунды)*/
+    }
+    a:hover:after,
+    a:focus:after {
+      width: 100%;
+    }
+  }
+  &__contact {
+    margin: 13px 0 50px 115px;
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      color: white;
+      margin-top: 18px;
+    }
+  }
+  &__icon {
+    display: flex;
+    margin: 50px 0px 57px 56px;
+  }
+  &__arrowup {    
+    margin-left: 32px;
+    width: 60px;
+    height: 60px; 
+    border-radius: 100%;
+    background: linear-gradient(87.32deg, #e2a300 4.47%, #e29500 95.53%);    
+    img {
+        margin: 12px;
+    }
+  }
 }
